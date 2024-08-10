@@ -1,6 +1,6 @@
 # Advance Computer Vision with Python
 
-本仓库代码基于 [Advance Computer Vision with Python](https://www.computervision.zone/courses/advance-computer-vision-with-python/) 进行修改，更加适合中国宝宝体质
+本仓库可用于计算机视觉入门，代码基于 [Advance Computer Vision with Python](https://www.computervision.zone/courses/advance-computer-vision-with-python/) 进行修改，更加适合中国宝宝体质
 
 本仓库计划用于2024成都理工大学人工智能协会技术培训使用
 
