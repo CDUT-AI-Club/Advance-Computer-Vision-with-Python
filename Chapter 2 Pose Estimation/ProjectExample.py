@@ -1,7 +1,9 @@
 import cv2
 import time
 import PoseModule as pm
-cap = cv2.VideoCapture('PoseVideos/9.mp4')
+cap = cv2.VideoCapture(
+    "E:\\Advance Computer Vision with Python\\Chapter 2 Pose Estimation\\PoseVideos\\5.mp4"
+)
 pTime = 0
 detector = pm.poseDetector()
 while True:
@@ -16,5 +18,6 @@ while True:
     pTime = cTime
     cv2.putText(img, str(int(fps)), (70, 50), cv2.FONT_HERSHEY_PLAIN, 3,
                 (255, 0, 0), 3)
+    cv2.namedWindow("Image", cv2.WINDOW_NORMAL)  # 创建可调整大小的窗口
     cv2.imshow("Image", img)
     cv2.waitKey(1)
