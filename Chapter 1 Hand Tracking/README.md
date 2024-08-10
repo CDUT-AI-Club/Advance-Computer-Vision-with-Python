@@ -12,7 +12,7 @@
 
 lm.x 和 lm.y 是关键点的归一化坐标，范围在 0 到 1 之间。通过乘以图像的宽度和高度，可以将它们转换为图像中的像素坐标
 
-mpHands.Hands 对象的参数：
+`mpHands.Hands()` 对象的参数：
 
 ```python
 static_image_mode: 是否将每帧作为静态图像处理

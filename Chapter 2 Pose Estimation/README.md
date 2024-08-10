@@ -6,7 +6,7 @@
 
 `results = pose.process(imgRGB)` 处理图像，检测姿势
 
-mpPose.Pose() 对象的参数
+`mpPose.Pose()` 对象的参数
 
 ```python
 static_image_mode=self.static_image_mode,  # 静态图像模式设置
