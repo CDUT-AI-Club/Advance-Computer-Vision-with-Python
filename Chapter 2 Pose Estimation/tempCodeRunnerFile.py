@@ -1,1 +1,0 @@
-E:\\Advance Computer Vision with Python\\Chapter 2 Pose Estimation\\PoseVideos\\3.mp4
