@@ -6,6 +6,7 @@
 
 ## 项目依赖
 
+- Python: `3.8`
 - OpenCV: `4.10.0`
 - MediaPipe: `0.10.10`
 
