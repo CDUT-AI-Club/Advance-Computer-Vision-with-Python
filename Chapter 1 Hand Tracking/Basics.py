@@ -11,8 +11,8 @@ hands = mpHands.Hands()  # 创建一个 Hands 对象，用于检测和跟踪手�
 mpDraw = mp.solutions.drawing_utils  # 引用绘图工具，用于在图像上绘制检测到的手部关键点和连接线
 
 # 初始化时间变量用于计算帧率
-pTime = 0  # 表示前一帧的时间
-cTime = 0  # 表示当前帧的时间
+pTime = 0  # 表示前一帧的时间，previous time
+cTime = 0  # 表示当前帧的时间，current time
 # cTime - pTime 计算时间差，从而计算帧率。最后将 cTime 赋值给 pTime，以便在下一次循环时使用
 
 while True:
