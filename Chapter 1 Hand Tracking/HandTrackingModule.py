@@ -1,5 +1,3 @@
-# cv2.__version__ = 4.10.0, mp.__version__ = 0.10.14
-
 import cv2
 import mediapipe as mp
 import time

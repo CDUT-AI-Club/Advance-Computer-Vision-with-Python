@@ -3,9 +3,9 @@ import mediapipe as mp
 import time
 
 # 初始化 Mediapipe 的绘图工具和姿势检测模块
-mpDraw = mp.solutions.drawing_utils
-mpPose = mp.solutions.pose
-pose = mpPose.Pose()
+mpDraw = mp.solutions.drawing_utils # 导入 MediaPipe 的绘图工具，用于在图像上绘制检测到的姿势连接和关键点
+mpPose = mp.solutions.pose  # 导入 MediaPipe 的姿势估计模块
+pose = mpPose.Pose()  # 创建一个姿势检测对象，用于处理图像并检测人体姿势
 
 # 打开视频文件
 cap = cv2.VideoCapture("E:\\Advance Computer Vision with Python\\Chapter 2 Pose Estimation\\PoseVideos\\3.mp4")
@@ -37,9 +37,7 @@ while True:
         for id, lm in enumerate(results.pose_landmarks.landmark):
             h, w, c = img.shape  # 获取图像尺寸
             cx, cy = int(lm.x * w), int(lm.y * h)  # 计算关键点在图像中的位置
-            cv2.circle(
-                img, (cx, cy), 5, (255, 0, 0), cv2.FILLED
-            )  # 在关键点位置绘制圆圈
+            cv2.circle(img, (cx, cy), 5, (255, 0, 0), cv2.FILLED)# 在关键点位置绘制圆圈
 
     cTime = time.time()
     fps = 1 / (cTime - pTime)  # 计算帧率
