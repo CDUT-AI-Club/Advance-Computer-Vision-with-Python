@@ -35,7 +35,6 @@ This is the English version of the repository. You can find the Chinese version 
 ```bash
 conda create -n visionpy python=3.8
 conda activate visionpy
-pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 pip install opencv-python==4.10.0
 pip install mediapipe==0.10.10
 ```
