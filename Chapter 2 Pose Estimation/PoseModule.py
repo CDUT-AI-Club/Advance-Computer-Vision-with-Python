@@ -114,7 +114,7 @@ class poseDetector:
 # 主函数
 def main():
     cap = cv2.VideoCapture(
-        "E:\\Advance Computer Vision with Python\\Chapter 2 Pose Estimation\\PoseVideos\\5.mp4"
+        "E:\\Advance Computer Vision with Python\\main\\Chapter 2 Pose Estimation\\PoseVideos\\5.mp4"
     )  # 打开视频文件
     pTime = 0  # 前一帧时间
     detector = poseDetector()  # 创建姿势检测器

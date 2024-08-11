@@ -8,7 +8,7 @@ mpPose = mp.solutions.pose  # 导入 MediaPipe 的姿势估计模块
 pose = mpPose.Pose()  # 创建一个姿势检测对象，用于处理图像并检测人体姿势
 
 # 打开视频文件
-cap = cv2.VideoCapture("E:\\Advance Computer Vision with Python\\Chapter 2 Pose Estimation\\PoseVideos\\3.mp4")
+cap = cv2.VideoCapture("E:\\Advance Computer Vision with Python\\main\\Chapter 2 Pose Estimation\\PoseVideos\\3.mp4")
 
 if not cap.isOpened():
     print("Error: Could not open video.")

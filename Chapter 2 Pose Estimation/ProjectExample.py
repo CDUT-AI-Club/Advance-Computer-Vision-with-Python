@@ -2,7 +2,7 @@ import cv2
 import time
 import PoseModule as pm
 cap = cv2.VideoCapture(
-    "E:\\Advance Computer Vision with Python\\Chapter 2 Pose Estimation\\PoseVideos\\5.mp4"
+    "E:\\Advance Computer Vision with Python\\main\\Chapter 2 Pose Estimation\\PoseVideos\\5.mp4"
 )
 pTime = 0
 detector = pm.poseDetector()

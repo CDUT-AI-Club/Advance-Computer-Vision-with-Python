@@ -18,6 +18,10 @@ min_tracking_confidence=self.min_tracking_confidence  # 跟踪置信度阈值
 
 # 注意事项
 
-用vscode执行代码时，请让终端在`Advance Computer Vision with Python`文件夹下（即vs打开这个整体的文件夹），以及视频路径请使用**绝对路径**，否则，将可能出现一些莫名其妙的报错
+如果出现如下报错：
 
-比如你让终端在`Chapter 2 Pose Estimation`文件夹下运行，opencv的GUI就要报错，**日怪得很**
+> cv2.error: OpenCV(4.10.0) D:\a\opencv-python\opencv-python\opencv\modules\highgui\src\window.cpp:1301: error: (-2:Unspecified error) The function is not implemented. Rebuild the library with Windows, GTK+ 2.x or Cocoa support. If you are on Ubuntu or Debian, install libgtk2.0-dev and pkg-config, then re-run cmake or configure script in function 'cvShowImage'
+
+请把终端移动到最外层文件夹运行（对于vscode就是打开最外层文件夹），我也不是很清楚为什么会出现这种bug
+
+以及视频文件的路径请使用**绝对路径**

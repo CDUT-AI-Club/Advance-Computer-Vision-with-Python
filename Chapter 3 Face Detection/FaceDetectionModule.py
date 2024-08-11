@@ -78,7 +78,7 @@ class FaceDetector:
 def main():
     # 打开视频文件
     cap = cv2.VideoCapture(
-        "E:\\Advance Computer Vision with Python\\Chapter 3 Face Detection\\Videos\\4.mp4"
+        "E:\\Advance Computer Vision with Python\\main\\Chapter 3 Face Detection\\Videos\\4.mp4"
     )
     pTime = 0  # 上一帧时间
     detector = FaceDetector()  # 创建人脸检测器对象
