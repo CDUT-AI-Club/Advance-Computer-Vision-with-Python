@@ -2,9 +2,13 @@
 
 本仓库可用于计算机视觉入门，代码基于 [Advance Computer Vision with Python](https://www.computervision.zone/courses/advance-computer-vision-with-python/) 进行修改，更加适合中国宝宝体质
 
-This repository is suitable for beginners in computer vision. The code is modified based on [Advance Computer Vision with Python](https://www.computervision.zone/courses/advance-computer-vision-with-python/), making it more suitable for the preferences and needs of Chinese users.
-
 本仓库计划用于2024成都理工大学人工智能协会技术培训使用
+
+这是本仓库的中文版本，你可以在这里找到英文版本：[英文版本](https://github.com/Diraw/Advance-Computer-Vision-with-Python/tree/main_en)
+
+This repository is suitable for beginners in computer vision. The code is modified based on [Advance Computer Vision with Python](https://www.computervision.zone/courses/advance-computer-vision-with-python/).
+
+This is the Chinese version of the repository. You can find the English version here: [English version](https://github.com/Diraw/Advance-Computer-Vision-with-Python/tree/main_en)
 
 ## 项目依赖
 
