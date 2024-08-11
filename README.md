@@ -31,6 +31,7 @@ This is the Chinese version of the repository. You can find the English version 
 - Python: `3.8`
 - OpenCV: `4.10.0`
 - MediaPipe: `0.10.10`
+- Pycaw: `20240210`
 
 ## Conda创建环境流程
 
@@ -40,4 +41,5 @@ conda activate visionpy
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 pip install opencv-python==4.10.0
 pip install mediapipe==0.10.10
+pip install pycaw==20240210
 ```
