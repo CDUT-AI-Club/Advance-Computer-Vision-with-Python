@@ -10,6 +10,22 @@ This repository is suitable for beginners in computer vision. The code is modifi
 
 This is the Chinese version of the repository. You can find the English version here: [English version](https://github.com/Diraw/Advance-Computer-Vision-with-Python/tree/main_en)
 
+## 本仓库的优势
+
+1. 在源代码的基础上加入了非常多的注释，对于初学者会遇到的各种问题都做了解释。例如：
+
+![1](./pics/1.png)
+
+![2](./pics/2.png)
+
+2. 在源代码的基础上加入了更多人性化的设计，例如使窗口大小可手动调整，设置退出键等操作
+
+3. 所有代码均可成功运行。在遇到新旧代码变动的情况，会在相应文件夹的 `README.md` 文件中指出，例如：
+
+![3](./Chapter%204%20Face%20Mesh/pics/关键字传参.png)
+
+4. 每个章节均有 `README.md` 文件，对重要的知识点进行汇总，方便复习
+
 ## 项目依赖
 
 - Python: `3.8`
