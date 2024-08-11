@@ -2,93 +2,103 @@ import cv2
 import mediapipe as mp
 import time
 
-# 打开摄像头
-cap = cv2.VideoCapture(0)  # 0是默认摄像头
+# Open the camera
+cap = cv2.VideoCapture(0)  # 0 is the default camera
 
-# 初始化手部检测模块
-mpHands = mp.solutions.hands  # 引用 MediaPipe 的手部解决方案模块
-hands = mpHands.Hands()  # 创建一个 Hands 对象，用于检测和跟踪手部关键点
-mpDraw = mp.solutions.drawing_utils  # 引用绘图工具，用于在图像上绘制检测到的手部关键点和连接线
+# Initialize the hand detection module
+mpHands = mp.solutions.hands  # Reference MediaPipe's hand solution module
+hands = (
+    mpHands.Hands()
+)  # Create a Hands object for detecting and tracking hand landmarks
+mpDraw = (
+    mp.solutions.drawing_utils
+)  # Reference drawing tools for drawing detected hand landmarks and connections
 
-# 初始化时间变量用于计算帧率
-pTime = 0  # 表示前一帧的时间，previous time
-cTime = 0  # 表示当前帧的时间，current time
-# cTime - pTime 计算时间差，从而计算帧率。最后将 cTime 赋值给 pTime，以便在下一次循环时使用
+# Initialize time variables for calculating FPS
+pTime = 0  # Previous time for the previous frame
+cTime = 0  # Current time for the current frame
+# cTime - pTime calculates the time difference to compute FPS. Finally, cTime is assigned to pTime for use in the next loop
 
 while True:
-    # 读取摄像头图像
+    # Read the camera image
     success, img = cap.read()
-    # success：一个布尔值，表示是否成功读取帧
-    # img：读取的图像帧，如果读取失败，这个值可能为空
+    # success: Boolean indicating if the frame was read successfully
+    # img: The image frame read; this value may be empty if reading fails
 
-    # 水平翻转图像
+    # Flip the image horizontally
     img = cv2.flip(img, 1)
-    # 第 0 维表示垂直方向（高度），对应图像的行数，上下
-    # 第 1 维表示水平方向（宽度），对应图像的列数，左右
+    # Dimension 0 represents the vertical direction (height), corresponding to the number of rows in the image, top to bottom
+    # Dimension 1 represents the horizontal direction (width), corresponding to the number of columns in the image, left to right
 
-    # 将图像从 BGR 格式转换为 RGB 格式
+    # Convert the image from BGR format to RGB format
     imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    # BGR 是图像在 OpenCV 中的默认颜色格式，代表蓝色（Blue）、绿色（Green）、红色（Red）。这种格式与通常使用的 RGB（红、绿、蓝）顺序相反。转换为 RGB 是因为许多图像处理库（如 MediaPipe）使用这种格式进行处理
+    # BGR is the default color format in OpenCV, representing Blue, Green, and Red. This order is opposite to the commonly used RGB (Red, Green, Blue). Conversion to RGB is because many image processing libraries (like MediaPipe) use this format for processing
 
-    # 处理图像以检测手部
+    # Process the image to detect hands
     results = hands.process(imgRGB)
 
-    # 如果检测到手部
+    # If hands are detected
     if results.multi_hand_landmarks:
-        # 遍历检测到的每只手
+        # Iterate over each detected hand
         for handLms in results.multi_hand_landmarks:
-            # results.multi_hand_landmarks 会返回一个列表，其中包含检测到的每只手的关键点信息。如果检测到多只手，它会包含多个元素，每个元素代表一只手的所有关键点
+            # results.multi_hand_landmarks returns a list containing landmark information for each detected hand. If multiple hands are detected, it contains multiple elements, each representing all landmarks of one hand
 
-            # 遍历手部关键点
-            for id, lm in enumerate(handLms.landmark):  
-                # enumerate 返回一个迭代器，每次迭代返回一个包含索引和值的元组
-                # id 是手部关键点的索引，lm 是 landmark 的缩写，表示手部关键点的坐标信息
+            # Iterate over hand landmarks
+            for id, lm in enumerate(handLms.landmark):
+                # enumerate returns an iterator, each iteration returns a tuple containing the index and value
+                # id is the index of the hand landmark, lm is short for landmark, representing the coordinate information of the hand landmark
 
-                # 获取图像的尺寸
-                h, w, c = (img.shape) 
-                # img.shape 返回一个包含图像维度的元组，具体包括：高度（行数）、宽度（列数）、通道数（如 RGB 图像的通道数为 3）
+                # Get the dimensions of the image
+                h, w, c = img.shape
+                # img.shape returns a tuple containing the image dimensions: height (number of rows), width (number of columns), and number of channels (e.g., 3 for RGB images)
 
-                # 计算关键点在图像中的坐标
+                # Calculate the coordinates of the landmark in the image
                 cx, cy = int(lm.x * w), int(lm.y * h)
-                # lm.x 和 lm.y 是关键点的归一化坐标，范围在 0 到 1 之间。通过乘以图像的宽度和高度，可以将它们转换为图像中的像素坐标
+                # lm.x and lm.y are the normalized coordinates of the landmark, ranging from 0 to 1. By multiplying by the image width and height, they can be converted to pixel coordinates in the image
 
                 print(id, cx, cy)
 
-                # 在关键点处画一个圆圈
+                # Draw a circle at the landmark
                 cv2.circle(img, (cx, cy), 15, (255, 0, 255), -1)
-                # img 表示要绘制图像的地方，(cx, cy) 圆心的坐标，15 圆的半径
-                # (255, 0, 255) 圆的颜色（BGR格式），这里是紫色
-                # 红色：(0, 0, 255)、绿色：(0, 255, 0)、蓝色：(255, 0, 0)、黄色：(0, 255, 255)、青色：(255, 255, 0)、品红：(255, 0, 255)、白色：(255, 255, 255)、黑色：(0, 0, 0)
-                # cv2.FILLED 或 -1 填充圆的实心样式，也可以为具体的数字（值为边框厚度）
+                # img is where to draw the image, (cx, cy) is the center of the circle, 15 is the radius
+                # (255, 0, 255) is the color of the circle (BGR format), which is purple here
+                # Red: (0, 0, 255), Green: (0, 255, 0), Blue: (255, 0, 0), Yellow: (0, 255, 255), Cyan: (255, 255, 0), Magenta: (255, 0, 255), White: (255, 255, 255), Black: (0, 0, 0)
+                # cv2.FILLED or -1 for a filled circle, or a specific number for border thickness
 
-            # 绘制手部关键点和连接线
+            # Draw hand landmarks and connections
             mpDraw.draw_landmarks(img, handLms, mpHands.HAND_CONNECTIONS)
-            # img 要绘制的图像，handLms 手部关键点的坐标
-            # mpHands.HAND_CONNECTIONS 定义手部关键点之间的连接关系，用于绘制骨架结构
+            # img is the image to draw on, handLms are the coordinates of the hand landmarks
+            # mpHands.HAND_CONNECTIONS defines the connections between hand landmarks for drawing the skeleton structure
 
-    # 计算帧率
+    # Calculate FPS
     cTime = time.time()
     fps = 1 / (cTime - pTime)
     pTime = cTime
 
-    # 在图像上显示帧率
-    cv2.putText(img, str(int(fps)), (10, 70), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
-    # img 要绘制文本的地方，str(int(fps)) 要显示的文本内容，这里是帧率的整数部分
-    # (10, 70) 文本的左下角坐标，cv2.FONT_HERSHEY_PLAIN 字体样式
-    # 3 字体大小，(255, 0, 255) 文本颜色（紫色，BGR格式），3 文本的粗细
-    # cv2.putText 不支持关键字传参，必须按照顺序提供参数
+    # Display FPS on the image
+    cv2.putText(
+        img, str(int(fps)), (10, 70), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3
+    )
+    # img is where to draw the text, str(int(fps)) is the text content to display, which is the integer part of FPS
+    # (10, 70) is the bottom-left corner of the text, cv2.FONT_HERSHEY_PLAIN is the font style
+    # 3 is the font size, (255, 0, 255) is the text color (purple, BGR format), 3 is the thickness of the text
+    # cv2.putText does not support keyword arguments; parameters must be provided in order
 
-    # 显示图像
-    cv2.imshow("Image", img)  # 在窗口中显示图像，窗口标题为“Image”
-    cv2.waitKey(1) # 等待键盘事件，参数为 1 表示等待 1 毫秒
-    # 它也允许图像窗口响应用户输入（如关闭窗口）
+    # Show the image
+    cv2.imshow("Image", img)  # Display the image in a window titled "Image"
+    cv2.waitKey(
+        1
+    )  # Wait for a keyboard event; a parameter of 1 means to wait for 1 millisecond
+    # This also allows the image window to respond to user input (such as closing the window)
 
-    # 检测退出键
-    if cv2.waitKey(1) & 0xFF == ord("q"):  # ord('q') 获取字符 'q' 的 ASCII 值
-        # cv2.waitKey(1) & 0xFF 用来读取键盘输入
-        # cv2.waitKey(1) 返回的是一个 32 位整数，其中低 8 位是实际的键值，& 0xFF 是一个位运算，用于提取这 8 位
-        # "低 8 位"指的是一个数值的二进制表示中最右边的 8 位。这些位表示数值的较小部分，与"高 8 位"（最左边的 8 位）相对，后者表示数值的较大部分。对于 32 位整数来说，低 8 位用于表示键盘输入的实际键值
+    # Detect exit key
+    if cv2.waitKey(1) & 0xFF == ord(
+        "q"
+    ):  # ord('q') gets the ASCII value of the character 'q'
+        # cv2.waitKey(1) & 0xFF is used to read keyboard input
+        # cv2.waitKey(1) returns a 32-bit integer, where the lower 8 bits are the actual key value, and & 0xFF is a bitwise operation to extract these 8 bits
+        # "Lower 8 bits" refers to the rightmost 8 bits in the binary representation of a number. These bits represent the smaller portion of the value, as opposed to the "higher 8 bits" (leftmost 8 bits), which represent the larger portion. For a 32-bit integer, the lower 8 bits are used to represent the actual key value from keyboard input
         break
 
-cap.release()  # 释放摄像头资源
-cv2.destroyAllWindows()  # 关闭所有 OpenCV 窗口
+cap.release()  # Release the camera resource
+cv2.destroyAllWindows()  # Close all OpenCV windows

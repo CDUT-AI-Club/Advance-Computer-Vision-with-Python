@@ -2,36 +2,38 @@ import cv2
 import mediapipe as mp
 import time
 
-# 打开视频文件
+# Open video file
 cap = cv2.VideoCapture(
     "E:\\Advance Computer Vision with Python\\main\\Chapter 3 Face Detection\\Videos\\4.mp4"
 )
 
-pTime = 0  # 上一帧的时间
+pTime = 0  # Previous frame time
 
-# 初始化MediaPipe的人脸检测模块
+# Initialize MediaPipe face detection module
 mpFaceDetection = mp.solutions.face_detection
 mpDraw = mp.solutions.drawing_utils
-faceDetection = mpFaceDetection.FaceDetection(0.75)  # 创建一个 MediaPipe 的人脸检测器对象并设置检测置信度阈值为0.75
+faceDetection = mpFaceDetection.FaceDetection(
+    0.75
+)  # Create a MediaPipe face detector object with a detection confidence threshold of 0.75
 
 while True:
-    success, img = cap.read()  # 读取视频帧
+    success, img = cap.read()  # Read video frame
     if not success:
         print("Failed to read frame")
         break
 
-    # 将图像转换为RGB格式
+    # Convert image to RGB format
     imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    results = faceDetection.process(imgRGB)  # 处理图像，进行人脸检测
+    results = faceDetection.process(imgRGB)  # Process the image for face detection
 
     if results.detections:
         for id, detection in enumerate(results.detections):
-            # mpDraw.draw_detection(img, detection) #使用 MediaPipe 提供的工具在图像上绘制检测到的人脸的边界框和关键点
+            # mpDraw.draw_detection(img, detection) # Use MediaPipe tools to draw bounding boxes and keypoints on the detected face
             # print(id, detection)
             # print(detection.score)
             # print(detection.location_data.relative_bounding_box)
 
-            # 获取人脸检测的边界框信息
+            # Get bounding box information for face detection
             bboxC = detection.location_data.relative_bounding_box
             ih, iw, ic = img.shape
             bbox = (
@@ -41,10 +43,10 @@ while True:
                 int(bboxC.height * ih),
             )
 
-            # 绘制边界框
+            # Draw bounding box
             cv2.rectangle(img, bbox, (255, 0, 255), 2)
 
-            # 显示检测置信度
+            # Display detection confidence
             cv2.putText(
                 img,
                 f"{int(detection.score[0] * 100)}%",
@@ -54,9 +56,9 @@ while True:
                 (255, 0, 255),
                 5,
             )
-            # 第一个5为字体大小，第二个5为字体粗细
+            # The first 5 is font size, the second 5 is font thickness
 
-    # 计算并显示帧率FPS
+    # Calculate and display FPS
     cTime = time.time()
     fps = 1 / (cTime - pTime)
     pTime = cTime
@@ -64,9 +66,9 @@ while True:
         img, f"FPS: {int(fps)}", (20, 70), cv2.FONT_HERSHEY_PLAIN, 5, (0, 255, 0), 5
     )
 
-    cv2.namedWindow("Image", cv2.WINDOW_NORMAL)  # 创建可调整大小的窗口
+    cv2.namedWindow("Image", cv2.WINDOW_NORMAL)  # Create a resizable window
 
-    # 显示图像
+    # Display image
     cv2.imshow("Image", img)
     if cv2.waitKey(1) & 0xFF == ord("q"):
         break
