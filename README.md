@@ -10,19 +10,19 @@ This is the English version of the repository. You can find the Chinese version 
 
 ## Advantages of This Repository
 
-Added extensive comments to the source code, explaining various issues beginners might encounter. For example:
+1. Added extensive comments to the source code, explaining various issues beginners might encounter. For example:
 
 ![1](./pics/1.png)
 
 ![2](./pics/2.png)
 
-Included more user-friendly designs based on the original code, such as allowing manual window resizing and setting exit keys.
+2. Included more user-friendly designs based on the original code, such as allowing manual window resizing and setting exit keys.
 
-All code runs successfully. Any changes between old and new code are noted in the `README.md` file of the respective folder. For example:
+3. All code runs successfully. Any changes between old and new code are noted in the `README.md` file of the respective folder. For example:
 
 ![3](./Chapter%204%20Face%20Mesh/pics/关键字传参.png)
 
-Each chapter includes a `README.md` file summarizing important concepts for easy review.
+4. Each chapter includes a `README.md` file summarizing important concepts for easy review.
 
 ## Project Dependencies
 
