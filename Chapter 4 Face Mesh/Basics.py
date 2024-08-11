@@ -59,7 +59,7 @@ while True:
     fps = 1 / (cTime - pTime)
     pTime = cTime
     cv2.putText(
-        img, f"FPS: {int(fps)}", (20, 70), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 0), 3
+        img, f"FPS: {int(fps)}", (20, 70), cv2.FONT_HERSHEY_PLAIN, 5, (255, 0, 0), 5
     )
 
     cv2.namedWindow("Image", cv2.WINDOW_NORMAL)  # 创建可调整大小的窗口
