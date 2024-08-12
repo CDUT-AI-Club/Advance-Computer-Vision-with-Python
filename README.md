@@ -54,3 +54,4 @@ pip install mediapipe==0.10.10
 pip install pycaw==20240210
 pip install autopy==4.0.0
 ```
+
