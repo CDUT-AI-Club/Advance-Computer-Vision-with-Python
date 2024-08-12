@@ -11,14 +11,13 @@
     <td width="60%"><img src="./pics/手势控制电脑音量.gif" alt="手势控制电脑音量"></td>
     <td width="40%"><img src="./pics/finger_counter.gif" alt="finger_counter"></td>
   </tr>
+  <tr>
+    <td colspan="2"><img src="./pics/AI Virtual Mouse.gif" alt="AI Virtual Mouse"></td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="./pics/AI Virtual Painter.gif" alt="AI Virtual Painter"></td>
+  </tr>
 </table>
-<p align="center">
-  <img src="./pics/AI Virtual Mouse.gif" alt="AI Virtual Mouse">
-</p>
-
-<p align="center">
-  <img src="./pics/AI Virtual Painter.gif" alt="AI Virtual Painter">
-</p>
 
 ## 本仓库的优势
 
