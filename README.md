@@ -18,6 +18,9 @@ This is the Chinese version of the repository. You can find the English version 
   <tr>
     <td colspan="2" style="text-align: center;"><img src="./pics/AI Virtual Mouse.gif" alt="AI Virtual Mouse"></td>
   </tr>
+  <tr>
+    <td colspan="2" style="text-align: center;"><img src="./pics/AI Virtual Painter.gif" alt="AI Virtual Painter"></td>
+  </tr>
 </table>
 
 
