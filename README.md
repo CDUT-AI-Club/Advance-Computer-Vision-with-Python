@@ -17,6 +17,9 @@
   <tr>
     <td colspan="2" style="text-align: center;"><img src="./pics/AI Virtual Painter.gif" alt="AI Virtual Painter"></td>
   </tr>
+  <tr>
+    <td colspan="2" style="text-align: center;"><img src="./pics/手势控制电脑音量.gif" alt="手势控制电脑音量"></td>
+  </tr>
 </table>
 
 
