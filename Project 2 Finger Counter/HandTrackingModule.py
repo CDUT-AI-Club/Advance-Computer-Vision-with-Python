@@ -81,6 +81,7 @@ def main():
 
     while True:
         success, img = cap.read()  # 读取摄像头帧
+        img = cv2.flip(img, 1)  # 水平翻转图像
         img = detector.findHands(img)  # 检测手并绘制
         lmList = detector.findPosition(img)  # 获取手部关键点位置
         if len(lmList) != 0:
