@@ -12,30 +12,12 @@
     <td width="40%"><img src="./pics/finger_counter.gif" alt="finger_counter"></td>
   </tr>
   <tr>
-    <td colspan="2">
-      <table width="100%">
-        <tr>
-          <td>
-            <center><img src="./pics/AI Virtual Mouse.gif" alt="AI Virtual Mouse"></center>
-          </td>
-        </tr>
-      </table>
-    </td>
+    <td colspan="2"><img src="./pics/AI Virtual Mouse.gif" alt="AI Virtual Mouse"></td>
   </tr>
   <tr>
-    <td colspan="2">
-      <table width="100%">
-        <tr>
-          <td>
-            <center><img src="./pics/AI Virtual Painter.gif" alt="AI Virtual Painter"></center>
-          </td>
-        </tr>
-      </table>
-    </td>
+    <td colspan="2"><img src="./pics/AI Virtual Painter.gif" alt="AI Virtual Painter"></td>
   </tr>
 </table>
-
-
 
 ## 本仓库的优势
 
