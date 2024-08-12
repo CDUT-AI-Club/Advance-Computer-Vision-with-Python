@@ -8,14 +8,14 @@
 
 <table width="100%">
   <tr>
-    <td width="60%"><img src="./pics/手势控制电脑音量.gif" alt="手势控制电脑音量"></td>
-    <td width="40%"><img src="./pics/finger_counter.gif" alt="finger_counter"></td>
+    <td width="60%"><img src="./pics/手势控制电脑音量.gif" alt="手势控制电脑音量" style="width: 100%;"></td>
+    <td width="40%"><img src="./pics/finger_counter.gif" alt="finger_counter" style="width: 100%;"></td>
   </tr>
   <tr>
-    <td colspan="2"><img src="./pics/AI Virtual Mouse.gif" alt="AI Virtual Mouse"></td>
+    <td colspan="2"><img src="./pics/AI Virtual Mouse.gif" alt="AI Virtual Mouse" style="width: 100%;"></td>
   </tr>
   <tr>
-    <td colspan="2"><img src="./pics/AI Virtual Painter.gif" alt="AI Virtual Painter"></td>
+    <td colspan="2"><img src="./pics/AI Virtual Painter.gif" alt="AI Virtual Painter" style="width: 100%;"></td>
   </tr>
 </table>
 
