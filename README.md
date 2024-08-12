@@ -12,10 +12,10 @@
     <td width="40%"><img src="./pics/finger_counter.gif" alt="finger_counter"></td>
   </tr>
   <tr>
-    <td colspan="2" style="text-align: center;"><img src="./pics/AI Virtual Mouse.gif" alt="AI Virtual Mouse"></td>
+    <td colspan="2" style="text-align: center;"><img src="./pics/AI Virtual Painter.gif" alt="AI Virtual Painter"></td>
   </tr>
   <tr>
-    <td colspan="2" style="text-align: center;"><img src="./pics/AI Virtual Painter.gif" alt="AI Virtual Painter"></td>
+    <td colspan="2" style="text-align: center;"><img src="./pics/AI Virtual Mouse.gif" alt="AI Virtual Mouse"></td>
   </tr>
 </table>
 
