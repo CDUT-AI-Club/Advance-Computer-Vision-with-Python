@@ -12,8 +12,11 @@ This is the Chinese version of the repository. You can find the English version 
 
 <table width="100%">
   <tr>
-    <td width="50%"><img src="./pics/手势控制电脑音量.gif" alt="手势控制电脑音量"></td>
-    <td width="50%"><img src="./pics/finger_counter.gif" alt="finger_counter"></td>
+    <td width="60%"><img src="./pics/手势控制电脑音量.gif" alt="手势控制电脑音量"></td>
+    <td width="40%"><img src="./pics/finger_counter.gif" alt="finger_counter"></td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align: center;"><img src="./pics/AI Virtual Mouse.gif" alt="AI Virtual Mouse"></td>
   </tr>
 </table>
 
@@ -40,6 +43,7 @@ This is the Chinese version of the repository. You can find the English version 
 - OpenCV: `4.10.0`
 - MediaPipe: `0.10.10`
 - Pycaw: `20240210`
+- autopy: `4.0.0`
 
 ## Conda创建环境流程
 
@@ -50,4 +54,5 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 pip install opencv-python==4.10.0
 pip install mediapipe==0.10.10
 pip install pycaw==20240210
+pip install autopy==4.0.0
 ```
