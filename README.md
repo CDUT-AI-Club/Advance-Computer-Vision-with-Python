@@ -12,46 +12,25 @@ This is the Chinese version of the repository. You can find the English version 
 
 <table width="100%">
   <tr>
-    <td width="60%">
-      <video width="100%" controls>
-        <source src="./assets/手势控制电脑音量.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </td>
-    <td width="40%">
-      <video width="100%" controls>
-        <source src="./assets/finger_counter.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </td>
+    <td width="60%"><img src="./pics/手势控制电脑音量.gif" alt="手势控制电脑音量"></td>
+    <td width="40%"><img src="./pics/finger_counter.gif" alt="finger_counter"></td>
   </tr>
   <tr>
-    <td colspan="2" style="text-align: center;">
-      <video width="100%" controls>
-        <source src="./assets/AI_Virtual_Mouse.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </td>
+    <td colspan="2" style="text-align: center;"><img src="./pics/AI Virtual Mouse.gif" alt="AI Virtual Mouse"></td>
   </tr>
   <tr>
-    <td colspan="2" style="text-align: center;">
-      <video width="100%" controls>
-        <source src="./assets/AI_Virtual_Painter.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </td>
+    <td colspan="2" style="text-align: center;"><img src="./pics/AI Virtual Painter.gif" alt="AI Virtual Painter"></td>
   </tr>
 </table>
-
 
 
 ## 本仓库的优势
 
 1. 在源代码的基础上加入了非常多的注释，对于初学者会遇到的各种问题都做了解释。例如：
 
-![1](./assets/1.png)
+![1](./pics/1.png)
 
-![2](./assets/2.png)
+![2](./pics/2.png)
 
 2. 在源代码的基础上加入了更多人性化的设计，例如使窗口大小可手动调整，设置退出键等操作
 
