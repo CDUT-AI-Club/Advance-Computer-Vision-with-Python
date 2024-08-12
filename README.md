@@ -2,7 +2,9 @@
 
 # Advance Computer Vision with Python
 
-This repository is suitable for beginners in computer vision. The code is modified based on [Advance Computer Vision with Python](https://www.computervision.zone/courses/advance-computer-vision-with-python/).
+This project offers a simple and straightforward introductory tutorial for beginners in computer vision. Through practical code exercises and comprehensive annotations, users can gradually master core technologies such as hand gesture recognition, pose estimation, and face detection.
+
+The code is modified and optimized based on [Advance Computer Vision with Python](https://www.computervision.zone/courses/advance-computer-vision-with-python/) to lower the barriers to learning and implementation.
 
 This repository is intended for use in the 2024 Chengdu University of Technology AI Club technical training.
 
