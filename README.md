@@ -6,8 +6,6 @@
 
 本仓库计划用于2024成都理工大学人工智能协会技术培训使用
 
-这是本仓库的中文版本，你可以在这里找到英文版本：[英文版本](https://github.com/Diraw/Advance-Computer-Vision-with-Python/tree/main_en)
-
 <table width="100%">
   <tr>
     <td width="60%"><img src="./pics/手势控制电脑音量.gif" alt="手势控制电脑音量"></td>
