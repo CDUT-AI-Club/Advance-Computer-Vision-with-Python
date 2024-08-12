@@ -19,6 +19,9 @@
   </tr>
 </table>
 
+![](./pics/AI%20Virtual%20Mouse.gif)
+![](./pics/AI%20Virtual%20Painter.gif)
+
 ## 本仓库的优势
 
 1. 在源代码的基础上加入了非常多的注释，对于初学者会遇到的各种问题都做了解释。例如：
