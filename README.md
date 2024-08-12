@@ -1,12 +1,23 @@
+[中文版本](https://github.com/Diraw/Advance-Computer-Vision-with-Python/tree/main) | English version
+
 # Advance Computer Vision with Python
 
 This repository is suitable for beginners in computer vision. The code is modified based on [Advance Computer Vision with Python](https://www.computervision.zone/courses/advance-computer-vision-with-python/).
 
-This repository is intended for use in the 2024 Chengdu University of Technology AI Association technical training.
+This repository is intended for use in the 2024 Chengdu University of Technology AI Club technical training.
 
-This is the English version of the repository. You can find the Chinese version here: [Chinese version](https://github.com/Diraw/Advance-Computer-Vision-with-Python/tree/main)
-
-这是本仓库的英文版本，你可以在这里找到中文版本：[中文版本](https://github.com/Diraw/Advance-Computer-Vision-with-Python/tree/main)
+<table width="100%">
+  <tr>
+    <td width="60%"><img src="./pics/手势控制电脑音量.gif" alt="手势控制电脑音量"></td>
+    <td width="40%"><img src="./pics/finger_counter.gif" alt="finger_counter"></td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align: center;"><img src="./pics/AI Virtual Mouse.gif" alt="AI Virtual Mouse"></td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align: center;"><img src="./pics/AI Virtual Painter.gif" alt="AI Virtual Painter"></td>
+  </tr>
+</table>
 
 ## Advantages of This Repository
 
