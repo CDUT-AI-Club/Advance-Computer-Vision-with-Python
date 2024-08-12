@@ -10,6 +10,13 @@ This repository is suitable for beginners in computer vision. The code is modifi
 
 This is the Chinese version of the repository. You can find the English version here: [English version](https://github.com/Diraw/Advance-Computer-Vision-with-Python/tree/main_en)
 
+<table>
+  <tr>
+    <td><img src="./pics/手势控制电脑音量.gif" alt="手势控制电脑音量"></td>
+    <td><img src="./pics/手势控制电脑音量.gif" alt="手势控制电脑音量"></td>
+  </tr>
+</table>
+
 ## 本仓库的优势
 
 1. 在源代码的基础上加入了非常多的注释，对于初学者会遇到的各种问题都做了解释。例如：

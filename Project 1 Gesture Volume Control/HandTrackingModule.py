@@ -103,6 +103,8 @@ class handDetector:
             # self.tipIds[0] 是大拇指指尖的索引(4)，self.tipIds[0] - 1 是大拇指指尖前一个关节的索引(3)
             # [1] 从 self.lmList 中获取该关节的 x 坐标，因为self.lmList.append([id, cx, cy])，第0维是id，第1维才是x坐标
             # 此时这个条件适用于右手大拇指伸直的情况
+            # 这种判断方式真的很难评，它并不明确区分左右手，而是基于位置关系进行推断。真正的左右手区分需要使用 mediapipe 提供的 multi_handedness 属性
+            # multi_handedness 是 MediaPipe 提供的一个属性，用于识别检测到的手是左手还是右手。它包含关于手的置信度和标签（"Left" 或 "Right"）的信息
             fingers.append(1)  # 右手大拇指伸直的话，返回1
         else:
             fingers.append(0)  # 右手大拇指弯曲的话，返回0
