@@ -2,9 +2,11 @@
 
 # Advance Computer Vision with Python
 
-本仓库可用于计算机视觉入门，代码基于 [Advance Computer Vision with Python](https://www.computervision.zone/courses/advance-computer-vision-with-python/) 进行修改，更加适合中国宝宝体质
+本项目为计算机视觉初学者提供了一套简单快捷的入门教程，通过实际的代码练习和丰富的注释，用户可以逐步掌握手势识别、姿态估计、面部检测等核心技术
 
-本仓库计划用于2024成都理工大学人工智能协会技术培训使用
+本项目代码基于 [Advance Computer Vision with Python](https://www.computervision.zone/courses/advance-computer-vision-with-python/) 进行修改和优化，特别适配于国内用户的开发环境，旨在降低学习和实现的门槛
+
+本项目计划用于2024成都理工大学人工智能协会技术培训使用
 
 <table width="100%">
   <tr>
