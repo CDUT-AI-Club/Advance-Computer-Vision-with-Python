@@ -8,7 +8,7 @@
 
 本项目计划用于2024成都理工大学人工智能协会技术培训使用
 
-**在线演示网站**：[手部特征点检测](https://vision-py-quick-start.top/)
+**在线演示网站**：[手部特征点检测](https://vision-py-quick-start.top/)，网站代码放在[GitHub仓库](https://github.com/Diraw/vision-py-quick-start)，个人web能力太烂了，欢迎大家PR QAQ
 
 <table width="100%">
   <tr>
