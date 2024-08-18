@@ -8,6 +8,8 @@ The code is modified and optimized based on [Advance Computer Vision with Python
 
 This repository is intended for use in the 2024 Chengdu University of Technology AI Club technical training.
 
+**Online demo site**: [Hand Tracking](https://vision-py-quick-start.top/)
+
 <table width="100%">
   <tr>
     <td width="60%"><img src="./pics/手势控制电脑音量.gif" alt="手势控制电脑音量" style="width: 100%;"></td>
