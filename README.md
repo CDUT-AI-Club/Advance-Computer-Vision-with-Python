@@ -8,6 +8,8 @@
 
 本项目计划用于2024成都理工大学人工智能协会技术培训使用
 
+**在线演示网站**：[手部特征点检测](https://vision-py-quick-start.top/)
+
 <table width="100%">
   <tr>
     <td width="60%"><img src="./pics/手势控制电脑音量.gif" alt="手势控制电脑音量" style="width: 100%;"></td>
