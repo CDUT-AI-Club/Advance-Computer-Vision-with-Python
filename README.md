@@ -6,7 +6,7 @@
 
 本项目代码基于 [Advance Computer Vision with Python](https://www.computervision.zone/courses/advance-computer-vision-with-python/) 进行修改和优化，特别适配于国内用户的开发环境，旨在降低学习和实现的门槛
 
-本项目计划用于2024成都理工大学人工智能协会技术培训使用
+本项目计划用于2024[成都理工大学人工智能协会](https://github.com/CDUT-AI-Club)技术培训使用
 
 **在线演示网站**：[手部特征点检测](https://vision-py-quick-start.top/)，网站代码放在[GitHub仓库](https://github.com/Diraw/vision-py-quick-start)，个人web能力太烂了，欢迎大家PR QAQ
 
