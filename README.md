@@ -6,7 +6,7 @@ This project offers a simple and straightforward introductory tutorial for begin
 
 The code is modified and optimized based on [Advance Computer Vision with Python](https://www.computervision.zone/courses/advance-computer-vision-with-python/) to lower the barriers to learning and implementation.
 
-This repository is intended for use in the 2024 Chengdu University of Technology AI Club technical training.
+This repository is intended for use in the 2024 [Chengdu University of Technology AI Club](https://github.com/CDUT-AI-Club) technical training.
 
 **Online demo site**: [Hand Tracking](https://vision-py-quick-start.top/)
 
